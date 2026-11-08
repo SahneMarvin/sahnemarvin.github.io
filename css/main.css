@@ -1,0 +1,87 @@
+:root {
+    --primary-color: #007fb1;
+    --border-color: rgba(0, 127, 177, 0.3);
+}
+
+body {
+    /* background: rgba(0, 137, 191, 0.2); */
+    background: linear-gradient(0deg,#002738 0%, rgb(0, 11, 15) 100%);
+    min-height: 100vh;
+    /* background-attachment: fixed; */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: url('../img/bg-pattern.svg') center repeat-x;
+    background-size: auto 100vh;
+    background-position: 80% 100%;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: -1;
+    filter: invert(51%) sepia(64%) saturate(4981%) hue-rotate(169deg) brightness(96%) contrast(101%);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 1rem;
+    font-family: "Google Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.pt-sans-regular {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-sans-bold {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.pt-sans-regular-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.pt-sans-bold-italic {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.border {
+    padding: 3rem 4rem;
+    border: 1px solid var(--border-color);
+    border-radius: 0.5rem;
+    -webkit-backdrop-filter: blur(0.25rem);
+    backdrop-filter: blur(0.25rem);
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hr {
+     height: 1px;
+    color: #ed1d61;
+    background: #ed1d61;
+    font-size: 0;
+    border: 0;
+}
